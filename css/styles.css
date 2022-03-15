@@ -388,12 +388,12 @@ h2 {
   background-image: url(../images/icons.svg/logo.svg/Logo1.svg),
     url(../images/icons.svg/logo.svg/Logo2.svg),
     url(../images/icons.svg/logo.svg/Logo3.svg),
-    url(../images/icons.svg/logo.svg/Logo5.svg),
+    url(../images/icons.svg/logo.svg/Logo4.svg),
     url(../images/icons.svg/logo.svg/Logo5.svg),
     url(../images/icons.svg/logo.svg/Logo6.svg);
 
   background-size: 92px;
-  background-position: 215px, 415px, 615px, 815px, 1015px, 1215px, center;
+  background-position: 32px, 232px, 432px, 632px, 832px, 1032px, center;
   outline: 1px solid tomato;
 }
 

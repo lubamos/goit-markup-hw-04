@@ -7,11 +7,13 @@
   --background-color: #2f303a;
   --portfolio-buttons: #f5f4fa;
   --footer-text-transp: rgba(255, 255, 255, 0.6);
+  --footer-text-soc: rgba(255, 255, 255, 1);
   --hero-button-fover: #188ce8;
   --team-background: #f5f4fa;
   --header-line: #ececec;
   --port-border: #eeeeee;
   --main-features-icons: #f5f4fa;
+  --background-social: rgba(255, 255, 255, 0.1);
 }
 body {
   background-color: var(--body-background-color);
@@ -143,7 +145,7 @@ p {
 .header-cont:nth-child(2)::before {
   background-image: url(../images/icons.svg/mobile.svg);
 }
-.header-cont:hover::before {
+.header-cont:nth-child(1):hover::before {
   background-image: url(../images/icons.svg/envelope.hover.svg);
 }
 hr.line {
@@ -362,9 +364,10 @@ h2 {
 
   height: 68px;
   background-repeat: no-repeat;
-  background-image: url(../images/icons.svg/instagram.svg),
-    url(../images/icons.svg/twitter.svg), url(../images/icons.svg/facebook.svg),
-    url(../images/icons.svg/linkedin.svg);
+  background-image: url(../images/icons.svg/social.svg/instagramo.svg),
+    url(../images/icons.svg/social.svg/twittero.svg),
+    url(../images/icons.svg/social.svg/facebooko.svg),
+    url(../images/icons.svg/social.svg/linkedino.svg);
 
   background-size: 20px;
   background-position: 44px, 98px, 152px, 206px, center;
@@ -385,12 +388,12 @@ h2 {
   box-sizing: border-box;
   border-radius: 4px;
   background-repeat: no-repeat;
-  background-image: url(../images/icons.svg/logo.svg/Logo1.svg),
-    url(../images/icons.svg/logo.svg/Logo2.svg),
-    url(../images/icons.svg/logo.svg/Logo3.svg),
-    url(../images/icons.svg/logo.svg/Logo4.svg),
-    url(../images/icons.svg/logo.svg/Logo5.svg),
-    url(../images/icons.svg/logo.svg/Logo6.svg);
+  background-image: url(../images/icons.svg/logo.svg/Logo1o.svg),
+    url(../images/icons.svg/logo.svg/Logo2o.svg),
+    url(../images/icons.svg/logo.svg/Logo3o.svg),
+    url(../images/icons.svg/logo.svg/Logo4o.svg),
+    url(../images/icons.svg/logo.svg/Logo5o.svg),
+    url(../images/icons.svg/logo.svg/Logo6o.svg);
 
   background-size: 92px;
   background-position: 32px, 232px, 432px, 632px, 832px, 1032px, center;
@@ -430,6 +433,7 @@ h2 {
   margin-bottom: 0;
 }
 .footer-list {
+  display: inline-block;
   list-style: none;
   color: var(--footer-text);
   text-decoration: none;
@@ -446,6 +450,50 @@ h2 {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.container.foot {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-social {
+  margin-left: 70px;
+
+  color: var(--footer-text-soc);
+  font-weight: 700px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.17;
+}
+.footer-soc {
+  margin-bottom: 20px;
+}
+.footer-soc-ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.button-footer {
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: var(--background-social);
+  background-position: center;
+}
+.button-footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--body-background-color);
+  background-position: center;
+}
+
+.button-footer:hover {
+  color: var(--hover-color);
+}
+
 /* Portfolio */
 .section-portfolio {
   padding-top: 94px;

@@ -14,6 +14,7 @@
   --port-border: #eeeeee;
   --main-features-icons: #f5f4fa;
   --background-social: rgba(255, 255, 255, 0.1);
+  --soc-color: rgba(175, 177, 184, 1);
 }
 body {
   background-color: var(--body-background-color);
@@ -128,6 +129,7 @@ p {
   text-decoration: none;
   color: var(--hover-color);
 }
+
 .header-envelope {
   fill: currentColor;
 }
@@ -217,30 +219,22 @@ hr.line {
 .features-element:nth-child(4n) {
   margin-right: 0;
 }
-.features-element::before {
-  display: block;
-  content: "";
-
+.features-element-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
   height: 120px;
-  background-repeat: no-repeat;
+  margin-bottom: 30px;
 
-  background-position: center;
-  outline: 1px solid tomato;
   background-color: var(--main-features-icons);
   border-radius: 4px;
 }
-.features-element:nth-child(1)::before {
-  background-image: url("../images/icons.svg/icon1.svg");
+.features-element-icon {
+  width: 70px;
+  height: 70px;
 }
-.features-element:nth-child(2)::before {
-  background-image: url("../images/icons.svg/icon2.svg");
-}
-.features-element:nth-child(3)::before {
-  background-image: url("../images/icons.svg/icon3.svg");
-}
-.features-element:nth-child(4)::before {
-  background-image: url("../images/icons.svg/icon4.svg");
-}
+
 .section-features {
   list-style: none;
   padding-top: 94px;
@@ -344,20 +338,39 @@ h2 {
   max-width: 100%;
   height: auto;
 }
-.employees-element::after {
-  display: block;
-  content: "";
+.employees-soc {
+  display: flex;
+  padding: 0;
+  margin: 0px;
+  margin-bottom: 30px;
+  list-style: none;
+  justify-content: center;
+}
+.employees-soc-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.employees-soc-item:last-child {
+  margin-right: 0;
+}
 
-  height: 68px;
-  background-repeat: no-repeat;
-  background-image: url(../images/icons.svg/social.svg/instagramo.svg),
-    url(../images/icons.svg/social.svg/twittero.svg),
-    url(../images/icons.svg/social.svg/facebooko.svg),
-    url(../images/icons.svg/social.svg/linkedino.svg);
-
-  background-size: 20px;
-  background-position: 44px, 98px, 152px, 206px, center;
-  outline: 1px solid tomato;
+.employees-soc-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--soc-color);
+}
+.employees-soc-item:hover,
+.employees-soc-item:focus {
+  background-color: var(--hover-color);
+}
+.employees-soc-icon:hover,
+.employees-soc-icon:focus {
+  fill: var(--body-background-color);
 }
 /* our clients*/
 .section-clients {

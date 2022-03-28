@@ -160,11 +160,13 @@ hr.line {
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(to right, rgba(47 48 58 0.4));
-  background-image: url("../images/Imghero.jpg");
-  background-color: rgb(47 48 58);
-
-  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/Imghero.jpg");
+  background-color: #c4c4c4;
   background-position: center;
   background-size: cover;
 }
@@ -334,6 +336,7 @@ h2 {
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.9;
+  margin-bottom: 16px;
 }
 .img-empl-main {
   display: block;
@@ -344,19 +347,26 @@ h2 {
   display: flex;
   padding: 0;
   margin: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
   list-style: none;
   justify-content: center;
 }
+
 .employees-soc-item {
-  display: flex;
+  display: table;
   width: 44px;
   height: 44px;
   margin-right: 10px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+
   cursor: pointer;
+}
+.employees-soc-link {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  fill: var(--soc-color);
+
+  border-radius: 50%;
 }
 .employees-soc-item:last-child {
   margin-right: 0;
@@ -365,16 +375,13 @@ h2 {
 .employees-soc-icon {
   width: 20px;
   height: 20px;
-  fill: var(--soc-color);
 }
-.employees-soc-item:hover,
-.employees-soc-item:focus {
+.employees-soc-link:hover,
+.employees-soc-link:focus {
   background-color: var(--hover-color);
-}
-.employees-soc-icon:hover,
-.employees-soc-icon:focus {
   fill: var(--body-background-color);
 }
+
 /* our clients*/
 .section-clients {
   padding-top: 94px;
@@ -388,11 +395,6 @@ h2 {
   margin: 0;
 }
 .clients-item {
-  display: flex;
-  width: 170px;
-  height: 92px;
-  align-items: center;
-  justify-content: center;
   margin-right: 30px;
 
   border: 1px solid var(--soc-color);
@@ -405,15 +407,22 @@ h2 {
 .clients-icon {
   width: 106px;
   height: 60px;
+}
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
   fill: var(--soc-color);
 }
-.clients-icon:hover,
-.clients-icon:focus {
+.clients-link:hover,
+.clients-link:focus {
   fill: var(--hover-color);
-}
-.clients-item:hover,
-.clients-item:focus {
   border: 1px solid var(--hover-color);
+}
+a:focus {
+  outline: none;
 }
 /* footer */
 
@@ -472,15 +481,14 @@ h2 {
 
 .footer-social {
   margin-left: 70px;
-
-  color: var(--footer-text-soc);
-  font-weight: 700px;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 1.17;
 }
 .footer-soc {
   margin-bottom: 20px;
+  color: var(--footer-text-soc);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.17;
 }
 .footer-soc-ul {
   display: flex;
@@ -593,6 +601,11 @@ h2 {
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.portfolio-item .header-link:hover,
+.portfolio-item .header-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }

@@ -197,6 +197,7 @@ hr.line {
 
   letter-spacing: 0.06em;
   font-family: inherit;
+  border: none;
 
   background-color: var(--hover-color);
   color: var(--footer-text);
